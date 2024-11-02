@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2751dde0c162140aeeac9b860887cf, type: 3}
+  m_Name: Alg_inter_ 8
+  m_EditorClassIdentifier: 
+  text_pregunta: "Manny quiere saber los nombres de los animales que tienen menos
+    de 3 a\xF1os y que tambi\xE9n son mam\xEDferos. \xBFQu\xE9 consulta deber\xEDa
+    usar?"
+  spr_pregunta: {fileID: 21300000, guid: 6414010f702612747ac9ce220b1fa78a, type: 3}
+  text_alternativas:
+  - text_alternativa: "Animales \u2A1D Cuidadores"
+    Is_correct: 0
+  - text_alternativa: "Animales \u2229 Cuidadores"
+    Is_correct: 1
+  - text_alternativa: "Animales \xD7 Cuidadores"
+    Is_correct: 0
+  - text_alternativa: Animales - Cuidadores
+    Is_correct: 0
+  dificultad: 1
+  tema: 1
+  tipoPregunta: 15

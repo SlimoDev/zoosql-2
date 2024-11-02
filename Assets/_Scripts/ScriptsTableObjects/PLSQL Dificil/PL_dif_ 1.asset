@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2751dde0c162140aeeac9b860887cf, type: 3}
+  m_Name: PL_dif_ 1
+  m_EditorClassIdentifier: 
+  text_pregunta: "\xBFC\xF3mo se declara un registro compuesto en PL/SQL?"
+  spr_pregunta: {fileID: 21300000, guid: 20e527718cf0ea84d83f69d898c0ff01, type: 3}
+  text_alternativas:
+  - text_alternativa: CREATE RECORD
+    Is_correct: 0
+  - text_alternativa: TYPE RECORD
+    Is_correct: 0
+  - text_alternativa: DECLARE RECORD
+    Is_correct: 0
+  - text_alternativa: RECORD TYPE
+    Is_correct: 1
+  dificultad: 2
+  tema: 0
+  tipoPregunta: 5

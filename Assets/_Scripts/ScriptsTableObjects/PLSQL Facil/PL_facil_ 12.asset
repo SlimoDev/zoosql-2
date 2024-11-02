@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2751dde0c162140aeeac9b860887cf, type: 3}
+  m_Name: PL_facil_ 12
+  m_EditorClassIdentifier: 
+  text_pregunta: "\xBFC\xF3mo se realiza una divisi\xF3n y se captura una excepci\xF3n
+    de divisi\xF3n por cero en PL/SQL?"
+  spr_pregunta: {fileID: 21300000, guid: ba11b2e8704640d418535b2bc3a6f710, type: 3}
+  text_alternativas:
+  - text_alternativa: EXCEPTION WHEN ZERO_DIVIDE THEN
+    Is_correct: 1
+  - text_alternativa: EXCEPTION WHEN DIVIDE_BY_ZERO THEN
+    Is_correct: 0
+  - text_alternativa: CATCH DIVIDE_BY_ZERO
+    Is_correct: 0
+  - text_alternativa: CATCH ZERO_DIVIDE
+    Is_correct: 0
+  dificultad: 0
+  tema: 0
+  tipoPregunta: 3

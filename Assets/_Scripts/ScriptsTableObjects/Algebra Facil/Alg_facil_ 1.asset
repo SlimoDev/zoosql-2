@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2751dde0c162140aeeac9b860887cf, type: 3}
+  m_Name: Alg_facil_ 1
+  m_EditorClassIdentifier: 
+  text_pregunta: "Manny quiere encontrar a todos los animales que est\xE1n en la
+    jaula n\xFAmero 3 para que Perry les pregunte el paradero de Alex. \xBFQu\xE9
+    consulta deber\xEDa usar?"
+  spr_pregunta: {fileID: 21300000, guid: fa3fc88c2a6626e42b4c54c5985ccb72, type: 3}
+  text_alternativas:
+  - text_alternativa: "\u03C3_jaula=3 (Cuidadores)"
+    Is_correct: 0
+  - text_alternativa: "\u03C3_jaula=3 (Cuidadores)"
+    Is_correct: 0
+  - text_alternativa: "\u03C0_nombre (Animales)"
+    Is_correct: 0
+  - text_alternativa: "\u03C3_jaula=3 (Animales)"
+    Is_correct: 1
+  dificultad: 0
+  tema: 1
+  tipoPregunta: 8

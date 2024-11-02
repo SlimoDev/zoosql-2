@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2751dde0c162140aeeac9b860887cf, type: 3}
+  m_Name: Alg_inter_ 2
+  m_EditorClassIdentifier: 
+  text_pregunta: "Manny quiere saber todos los nombres de los animales que est\xE1n
+    en la jaula n\xFAmero 2 o en la jaula n\xFAmero 3. \xBFQu\xE9 consulta deber\xEDa
+    usar?"
+  spr_pregunta: {fileID: 21300000, guid: 8acbbdfa469517548b8ce4492c82332c, type: 3}
+  text_alternativas:
+  - text_alternativa: "\u03C0_nombre (\u03C3_jaula=2 (Animales)) \u2229 \u03C0_nombre
+      (\u03C3_jaula=3 (Animales))"
+    Is_correct: 0
+  - text_alternativa: "\u03C0_nombre (\u03C3_jaula=2 (Animales)) \u222A \u03C0_nombre
+      (\u03C3_jaula=3 (Animales))"
+    Is_correct: 1
+  - text_alternativa: "\u03C0_nombre (\u03C3_jaula=2 (Animales)) - \u03C0_nombre
+      (\u03C3_jaula=3 (Animales))"
+    Is_correct: 0
+  - text_alternativa: "\u03C0_nombre (\u03C3_jaula=2 (Animales)) \u2A1D \u03C0_nombre
+      (\u03C3_jaula=3 (Animales))"
+    Is_correct: 0
+  dificultad: 1
+  tema: 1
+  tipoPregunta: 11

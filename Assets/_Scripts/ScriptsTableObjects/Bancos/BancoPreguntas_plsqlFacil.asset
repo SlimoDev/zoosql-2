@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5120986f5141aa48a1101f3f18c7335, type: 3}
+  m_Name: BancoPreguntas_plsqlFacil
+  m_EditorClassIdentifier: 
+  BancoPreguntas:
+  - {fileID: 11400000, guid: 00dc8d27930b12b4096db1a2903f4fad, type: 2}
+  - {fileID: 11400000, guid: a9ce3fb27b7bd484d91f38b6b8544ddb, type: 2}
+  - {fileID: 11400000, guid: ab6c026d94ec16d4cab6d611c503e7bf, type: 2}
+  - {fileID: 11400000, guid: 389ea763096cc9f499aed620fb6fc3d2, type: 2}
+  - {fileID: 11400000, guid: d7c1e8c8a62df1f4ab9300fbdd6a2ac5, type: 2}
+  - {fileID: 11400000, guid: 26b3ab8fa2eb1064dbf1db89a37a52c0, type: 2}
+  - {fileID: 11400000, guid: 81e0e97f78ed13344b962a88b5108e71, type: 2}
+  - {fileID: 11400000, guid: d2eb3cdee60d50f4c86f2463c0da93bf, type: 2}
+  - {fileID: 11400000, guid: 967958f136da05549be7d03c18c5f2d8, type: 2}
+  - {fileID: 11400000, guid: e80825e8e3156ed4b909ac13b52e1a3e, type: 2}
+  TipoPregunta: 5
+  tema: 0
