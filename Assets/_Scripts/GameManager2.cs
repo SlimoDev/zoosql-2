@@ -61,7 +61,10 @@ public class GameManager2 : MonoBehaviour
             (Tema.Algebra, Dificultad.Dificil),
             (Tema.Plsql, Dificultad.Facil),
             (Tema.Plsql, Dificultad.Intermedio),
-            (Tema.Plsql, Dificultad.Dificil)
+            (Tema.Plsql, Dificultad.Dificil),
+            (Tema.Dmliql, Dificultad.Facil),
+            (Tema.Dmliql, Dificultad.Intermedio),
+            (Tema.Dmliql, Dificultad.Dificil)
         };
         
         SetCurrentLevel();

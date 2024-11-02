@@ -17,6 +17,9 @@ public class OpcionesBoton : MonoBehaviour
         if (tema == Tema.Algebra)
             PlayerPrefs.SetString("currentGameType", GameType.QuizGame.ToString());
         else if (tema == Tema.Plsql)
-            PlayerPrefs.SetString("currentGameType", GameType.CardsGame.ToString());
+            //PlayerPrefs.SetString("currentGameType", GameType.CardsGame.ToString());
+            PlayerPrefs.SetString("currentGameType", GameType.QuizGame.ToString());
+        else if (tema == Tema.Dmliql)
+            PlayerPrefs.SetString("currentGameType", GameType.QuizGame.ToString());
     }
 }

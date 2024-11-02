@@ -29,6 +29,7 @@ public class SceneLoadManager : MonoBehaviour
 
     public void ChangeScene(string name)
     {
+        Debug.Log("Cargando escena " + name);
         SceneManager.LoadScene(name);
     }
 

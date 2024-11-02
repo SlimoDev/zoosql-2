@@ -16,14 +16,16 @@ public class PreguntaSO : ScriptableObject
     public TipoPregunta tipoPregunta;
 }
 // El enum es un indice
-public enum Dificultad{
+public enum Dificultad
+{
 
     Facil, Intermedio, Dificil
 
 }
 
 [Serializable]
-public  struct Alternativa {
+public  struct Alternativa 
+{
 
 
     public string text_alternativa;
@@ -31,9 +33,10 @@ public  struct Alternativa {
 
 }
 
-public enum Tema {
+public enum Tema 
+{
 
-    Plsql, Algebra
+    Plsql, Algebra, Dmliql
 }
 
 public enum TipoPregunta
@@ -42,7 +45,10 @@ public enum TipoPregunta
     TiposDatosDeclaraciones, OperacionManipulacionDatos, ControlFlujoBucles,ManejoExcepciones,FuncionesOperadores,TiposDatosColecciones,EstructuraManejoDatos,FuncionesProcedimientos,
 
     //Algebra
-    Seleccion, Proyeccion,SeleccionCondicion,ProyeccionCondicion,Union,Diferencia,Interseccion, JoinNatural,UnionCodicion,JoinNaturalCondicion,AgregacionAgrupamiento,AgregacionCondicion,Agregacion
+    Seleccion, Proyeccion,SeleccionCondicion,ProyeccionCondicion,Union,Diferencia,Interseccion, JoinNatural,UnionCodicion,JoinNaturalCondicion,AgregacionAgrupamiento,AgregacionCondicion,Agregacion,
+
+    //DMLIQL 
+    ejemplo1, ejemplo2, ejemplo3, ejemplo4, ejemplo5
 }
 
 
