@@ -5,7 +5,10 @@ using UnityEngine;
 public class CardsGameManager : MonoBehaviour
 {
     [SerializeField] private int maxQuestions = 10;
-    [SerializeField] private List<Cards> m_cards;
+    public List<Cards> m_cards;
+    [SerializeField] private List<Cards> m_cardsAlgebraLinear;
+    [SerializeField] private List<Cards> m_cardsDmliql;
+    [SerializeField] private List<Cards> m_cardsPlsql;
     [SerializeField] private List<string> currentCardWords;
 
     private int difficulty = 0;
@@ -22,6 +25,7 @@ public class CardsGameManager : MonoBehaviour
     private IEnumerator Start()
     {
         yield return new WaitForEndOfFrame();
+        SetTemaYDificultad(DataManager.Instance.Tema, DataManager.Instance.Dificultad);
         difficulty = 0;
         StartGame();
     }
@@ -51,4 +55,23 @@ public class CardsGameManager : MonoBehaviour
 
         return incorrect;
     }
+    public void SetTemaYDificultad(Tema tema, Dificultad dificultad)
+    {
+        m_cards = tema switch
+        {
+            Tema.Algebra => m_cardsAlgebraLinear,
+            Tema.Plsql => m_cardsPlsql,
+            Tema.Dmliql => m_cardsDmliql,
+            _ => new List<Cards>()  // En caso de que no haya coincidencia, devuelve una lista vacía.
+        };
+
+        difficulty = dificultad switch
+        {
+            Dificultad.Facil => 0,
+            Dificultad.Intermedio => 1,
+            Dificultad.Dificil => 2,
+            _ => 0  // En caso de que no haya coincidencia, devuelve una dificultad fácil.
+        };
+    }
+
 }
