@@ -14,6 +14,7 @@ public class GameManager2 : MonoBehaviour
     public int IndexPregunta = 0;
     [SerializeField] private List<ListPreguntasSO> bdQuestionsAlgebra;
     [SerializeField] private List<ListPreguntasSO> bdQuestionsPlSQL;
+    [SerializeField] private List<ListPreguntasSO> bdQuestionsDmliql;
     public List<PreguntaSO> questions;
 
     public List<(Tema, Dificultad)> difficultyLevel;
@@ -118,9 +119,17 @@ public class GameManager2 : MonoBehaviour
         List<ListPreguntasSO> bdQuestions = new List<ListPreguntasSO>();
         List<PreguntaSO> questionsByDifficulty = new List<PreguntaSO>();
         List<PreguntaSO> randomQuestions = new List<PreguntaSO>();
-        
-        bdQuestions = tema == Tema.Algebra ? bdQuestionsAlgebra : bdQuestionsPlSQL;
-        
+
+        //bdQuestions = tema == Tema.Algebra ? bdQuestionsAlgebra : bdQuestionsPlSQL;
+
+        bdQuestions = tema switch
+        {
+            Tema.Algebra => bdQuestionsAlgebra,
+            Tema.Plsql => bdQuestionsPlSQL,
+            Tema.Dmliql => bdQuestionsDmliql,
+            _ => new List<ListPreguntasSO>()  // En caso de que no haya coincidencia, devuelve una lista vacía.
+        };
+
         foreach (ListPreguntasSO listPreguntas in bdQuestions)
         {
             foreach (PreguntaSO pregunta in listPreguntas.BancoPreguntas)

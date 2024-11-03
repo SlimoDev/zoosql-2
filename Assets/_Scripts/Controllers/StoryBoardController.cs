@@ -84,14 +84,16 @@ namespace Controllers
 
                         Debug.Log("Game type: " + gameType);
 
-                        if (gameType == GameType.QuizGame.ToString())
-                        {
-                            SceneManager.LoadScene("AlgebraGame");
-                        }
-                        else
-                        {
-                            SceneManager.LoadScene("CardsGame");
-                        }
+                        SceneManager.LoadScene("AlgebraGame");
+
+                        //if (gameType == GameType.QuizGame.ToString())
+                        //{
+                        //    SceneManager.LoadScene("AlgebraGame");
+                        //}
+                        //else
+                        //{
+                        //    SceneManager.LoadScene("CardsGame");
+                        //}
                     }
                 });
 
