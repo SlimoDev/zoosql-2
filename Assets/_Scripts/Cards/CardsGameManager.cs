@@ -11,7 +11,7 @@ public class CardsGameManager : MonoBehaviour
     [SerializeField] private List<Cards> m_cardsPlsql;
     [SerializeField] private List<string> currentCardWords;
 
-    private int difficulty = 0;
+    public static int difficulty;
 
     public event System.Action<List<string>> OnCardSelected;
 
@@ -24,9 +24,10 @@ public class CardsGameManager : MonoBehaviour
 
     private IEnumerator Start()
     {
+        difficulty = 0;
         yield return new WaitForEndOfFrame();
         SetTemaYDificultad(DataManager.Instance.Tema, DataManager.Instance.Dificultad);
-        difficulty = 0;
+        
         StartGame();
     }
 
@@ -70,7 +71,7 @@ public class CardsGameManager : MonoBehaviour
             Dificultad.Facil => 0,
             Dificultad.Intermedio => 1,
             Dificultad.Dificil => 2,
-            _ => 0  // En caso de que no haya coincidencia, devuelve una dificultad fácil.
+            _ => 0  // En caso de que no haya coincidencia, devuelve la dificultad fácil.
         };
     }
 

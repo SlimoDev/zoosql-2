@@ -10,12 +10,15 @@ using UnityEngine.UI;
 public class GameManager2 : MonoBehaviour
 {
     public static GameManager2 Instance { private set; get; }
+
+    public GameObject wordsTrayGM;
     
     public int IndexPregunta = 0;
     [SerializeField] private List<ListPreguntasSO> bdQuestionsAlgebra;
     [SerializeField] private List<ListPreguntasSO> bdQuestionsPlSQL;
     [SerializeField] private List<ListPreguntasSO> bdQuestionsDmliql;
     public List<PreguntaSO> questions;
+    public List<PreguntaSO> correctQuestions;  
 
     public List<(Tema, Dificultad)> difficultyLevel;
     public int currentLevel;
@@ -51,6 +54,7 @@ public class GameManager2 : MonoBehaviour
 
     public void Start()
     {
+        IndexPregunta = 0;
         IniciarJuego();
         m_IsCorrectAnswer = new bool[10];
         isGameOver = false;
@@ -76,9 +80,10 @@ public class GameManager2 : MonoBehaviour
     {
         questions = new List<PreguntaSO>();
         
+        
         Debug.Log("Dificultad: " + DataManager.Instance.Dificultad + " Tema: " + DataManager.Instance.Tema);
         questions = GetQuestions(DataManager.Instance.Dificultad, DataManager.Instance.Tema);
-
+        correctQuestions = questions;
         // Aquí puedes añadir la lógica para iniciar el juego con la lista de preguntas seleccionadas
         if (m_QuizUI != null)
         {
@@ -87,9 +92,35 @@ public class GameManager2 : MonoBehaviour
         }
     }
 
+    public void SiguientePreguntaCards()
+    {
+        if (CardWord.incorrectCards <= 0 && wordsTrayGM.transform.childCount > 0)
+        {
+            m_pointsBar[IndexPregunta].GetComponent<Image>().sprite = m_correctAnswerSprite;
+            SoundManager.Instance.PlaySound(m_correctAnswerSound);
+            m_IsCorrectAnswer[IndexPregunta] = true;
+        }
+        else
+        {
+            m_pointsBar[IndexPregunta].GetComponent<Image>().sprite = m_incorrectAnswerSprite;
+            SoundManager.Instance.PlaySound(m_incorrectAnswerSound);
+            m_IsCorrectAnswer[IndexPregunta] = false;
+        }
+        correctQuestions[IndexPregunta].tipoPregunta = CardsGameManager.Instance.m_cards[CardsGameManager.difficulty].QuizType;
+
+        IndexPregunta++;
+        CardWord.incorrectCards = 0;
+
+        if (IndexPregunta >= 10)
+        {
+            SceneManager.LoadScene("RouletteScene");
+            IndexPregunta = 0;
+        }
+    }
+
     public void SiguientePregunta(int indexButton)
     {
-        
+        //int indexOriginal = 0;
         if (questions[IndexPregunta].text_alternativas[indexButton].Is_correct)
         {
             m_pointsBar[IndexPregunta].GetComponent<Image>().sprite = m_correctAnswerSprite;
@@ -102,7 +133,9 @@ public class GameManager2 : MonoBehaviour
             SoundManager.Instance.PlaySound(m_incorrectAnswerSound);
             m_IsCorrectAnswer[IndexPregunta] = false;
         }
-        
+        //correctQuestions[IndexPregunta] = questions[indexOriginal];
+
+        //indexOriginal++;
         IndexPregunta++;
         
         if (IndexPregunta >= 10)
@@ -110,7 +143,11 @@ public class GameManager2 : MonoBehaviour
             SceneManager.LoadScene("RouletteScene");
             IndexPregunta = 0;
         }
-        
+        else
+        {
+            RandomGameManager.RandomMinigame(); //_---------------------------------------------------------
+        }
+
         m_QuizUI.MostrarPregunta(questions[IndexPregunta]);
     }
     

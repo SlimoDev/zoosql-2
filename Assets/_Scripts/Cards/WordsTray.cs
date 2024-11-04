@@ -60,6 +60,7 @@ public class WordsTray : MonoBehaviour, IDropHandler
         foreach (int index in incorrect)
         {
             transform.GetChild(index).GetComponent<CardWord>().SetCorrect(false);
+            
         }
 
         restartBtn.SetActive(true);

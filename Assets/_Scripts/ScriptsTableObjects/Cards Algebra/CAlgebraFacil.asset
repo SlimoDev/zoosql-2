@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRandomWords: 1
   maxRandomWords: 2
-  quizType: 0
+  quizType: 21
   cards:
   - Esto es una prueba 1
   - Esto es una prueba 2

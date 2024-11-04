@@ -10,7 +10,12 @@ public class CardWord : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Image background;
+    public static int incorrectCards;
     
+    void Start()
+    {
+        incorrectCards = 0;
+    }
     public void Show()
     {
         canvasGroup.alpha = 1;
@@ -19,9 +24,14 @@ public class CardWord : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     public void SetCorrect(bool correct)
     {
         if (correct)
+        { 
             background.color = Color.green;
+        }
         else
+        {
             background.color = Color.red;
+            incorrectCards++;
+        }
     }
 
     public void SetWord(string word)

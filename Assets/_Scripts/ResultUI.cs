@@ -79,7 +79,7 @@ public class ResultUI : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            var question = GameManager2.Instance.questions[i];
+            var question = GameManager2.Instance.correctQuestions[i];
             Debug.Log($"Indice de pregunta: {i}");
             Debug.Log($"Cantidad de preguntas: {GameManager2.Instance.questions.Count}");
             Debug.Log($"Pregunta {i + 1}: {question.text_pregunta}");
