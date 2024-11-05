@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Color: {r: 0.3372549, g: 0.11764707, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -227,7 +227,6 @@ MonoBehaviour:
   canvasGroup: {fileID: 7623656235839044540}
   text: {fileID: 6195396024820489742}
   background: {fileID: 5841806912590912270}
-  rect: {fileID: 2275466017878181421}
 --- !u!225 &7623656235839044540
 CanvasGroup:
   m_ObjectHideFlags: 0
