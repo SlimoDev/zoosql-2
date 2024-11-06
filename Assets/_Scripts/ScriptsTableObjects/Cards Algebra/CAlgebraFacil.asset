@@ -16,8 +16,7 @@ MonoBehaviour:
   maxRandomWords: 2
   quizType: 21
   cards:
-  - Esto es una prueba 2 Esto es una prueba 2Esto es una prueba 2Esto es una prueba
-    2Esto es una prueba 2Esto es una prueba 2
+  - Esto es un ejemplo Esto
   randomWords:
   - random1
   - random2

@@ -53,12 +53,14 @@ public class CardsWordDisplayUI : MonoBehaviour, IDropHandler
             int k = rng.Next(n + 1);
             (copy[n], copy[k]) = (copy[k], copy[n]);
         }
-
+        int i = 1;
         foreach (string word in copy)
         {
+            
             CardWord wordObj = Instantiate(wordPrefab, Vector3.zero, Quaternion.identity, transform);
             wordObj.SetWord(word);
-            wordObj.name = $"{word}_display";
+            wordObj.name = $"{word}{i}_display";
+            i++;
         }
     }
 
@@ -73,7 +75,7 @@ public class CardsWordDisplayUI : MonoBehaviour, IDropHandler
             {
                 child.GetComponent<CardWord>().Show();
                 Destroy(returnedWord);
-
+                DragCard.Instance.OnEndDrag();
                 break;
             }
         }

@@ -86,6 +86,7 @@ public class CardWord : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         else if (eventData.pointerDrag.name.Contains("_display"))
         {
             transform.parent.GetComponent<WordsTray>().AddWord(eventData.pointerDrag);
+            
         }
     }
 }

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using TMPro;
 
 public class WordsTray : MonoBehaviour, IDropHandler
 {
@@ -27,13 +29,28 @@ public class WordsTray : MonoBehaviour, IDropHandler
         {
             AddWord(eventData.pointerDrag);
         }
+        else
+        {
+            SubstractWord(eventData.pointerDrag);
+        }
     }
 
     public void AddWord(GameObject word)
     {
         StartCoroutine(AddNewWord(word));
     }
+    public void SubstractWord(GameObject word)
+    {
+        StartCoroutine(SubsAddNewWord(word));
+    }
 
+    private IEnumerator SubsAddNewWord(GameObject word)
+    {
+        yield return new WaitForEndOfFrame();
+
+        CardWord draggedCardWord = word.GetComponent<CardWord>();
+        draggedCardWord.Show();
+    }
     private IEnumerator AddNewWord(GameObject word)
     {
         yield return new WaitForEndOfFrame();
@@ -49,10 +66,11 @@ public class WordsTray : MonoBehaviour, IDropHandler
     public void CheckAnswer()
     {
         List<string> words = new();
-
         foreach (Transform child in transform)
         {
-           words.Add(child.name.Replace("_tray", ""));
+            //words.Add(child.name.Replace("_tray", ""));
+            words.Add(child.transform.GetChild(0).GetComponent<TMP_Text>().text);
+            Debug.Log("Salió bien ");
         }
 
         List<int> incorrect = CardsGameManager.Instance.CheckAnswer(words);
