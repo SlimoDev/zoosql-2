@@ -67,9 +67,9 @@ public class GameManager2 : MonoBehaviour
             (Tema.Plsql, Dificultad.Facil),
             (Tema.Plsql, Dificultad.Intermedio),
             (Tema.Plsql, Dificultad.Dificil),
-            (Tema.Dmliql, Dificultad.Facil),
-            (Tema.Dmliql, Dificultad.Intermedio),
-            (Tema.Dmliql, Dificultad.Dificil)
+            (Tema.DMLDQL, Dificultad.Facil),
+            (Tema.DMLDQL, Dificultad.Intermedio),
+            (Tema.DMLDQL, Dificultad.Dificil)
         };
         
         SetCurrentLevel();
@@ -163,7 +163,7 @@ public class GameManager2 : MonoBehaviour
         {
             Tema.Algebra => bdQuestionsAlgebra,
             Tema.Plsql => bdQuestionsPlSQL,
-            Tema.Dmliql => bdQuestionsDmliql,
+            Tema.DMLDQL => bdQuestionsDmliql,
             _ => new List<ListPreguntasSO>()  // En caso de que no haya coincidencia, devuelve una lista vacía.
         };
 

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5120986f5141aa48a1101f3f18c7335, type: 3}
+  m_Name: Preguntas_DMLDQL_Dificil
+  m_EditorClassIdentifier: 
+  BancoPreguntas:
+  - {fileID: 11400000, guid: 8dc71003e860f1044ba4ddc09de04fdb, type: 2}
+  - {fileID: 11400000, guid: 045789fac1e431f4283b96df4e93a7f0, type: 2}
+  - {fileID: 11400000, guid: 4f657055648683d4c93150f6b02ec0aa, type: 2}
+  - {fileID: 11400000, guid: a4d1069d7c352214fad6e738c9843eb3, type: 2}
+  - {fileID: 11400000, guid: 1aeab3412f5950b4bac1b411208c42a7, type: 2}
+  - {fileID: 11400000, guid: e0545a5942efbcd4eb19cfc7bc789edd, type: 2}
+  - {fileID: 11400000, guid: e6cf0729d99f4a04bad8799db6292a57, type: 2}
+  - {fileID: 11400000, guid: 6e18569346af21847b7567c7c1a5eb84, type: 2}
+  - {fileID: 11400000, guid: fb5412fbd2c3df3439b065c40f9f6623, type: 2}
+  - {fileID: 11400000, guid: 4e105cca597048648802c357c354d3ef, type: 2}
+  dificultad: 2

@@ -36,7 +36,7 @@ public  struct Alternativa
 public enum Tema 
 {
 
-    Plsql, Algebra, Dmliql
+    Plsql, Algebra, DMLDQL
 }
 
 public enum TipoPregunta
@@ -48,7 +48,8 @@ public enum TipoPregunta
     Seleccion, Proyeccion,SeleccionCondicion,ProyeccionCondicion,Union,Diferencia,Interseccion, JoinNatural,UnionCodicion,JoinNaturalCondicion,AgregacionAgrupamiento,AgregacionCondicion,Agregacion,
 
     //DMLIQL 
-    ejemplo1, ejemplo2, ejemplo3, ejemplo4, ejemplo5
+    SelecciónDatos, InsercionDatos,ActualizacionDatos,EliminacionDatos,FuncionesAgregado,Subconsultas
 }
 
 
+    

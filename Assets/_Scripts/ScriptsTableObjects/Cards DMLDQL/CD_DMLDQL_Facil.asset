@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f2c5da7ab01d04fa9837bdd91a39f8, type: 3}
+  m_Name: CD_DMLDQL_Facil
+  m_EditorClassIdentifier: 
+  minRandomWords: 0
+  maxRandomWords: 0
+  quizType: 21
+  cards:
+  - "SELECT * FROM productos;\r"
+  - "SELECT * FROM clientes WHERE pais = 'Per\xFA';\r"
+  - "SELECT nombre, salario FROM empleados;\r"
+  - "SELECT nombre FROM clientes WHERE compras > 5;\r"
+  - "SELECT nombre, pais FROM clientes ORDER BY nombre ASC;\r"
+  - "INSERT INTO empleados (id, nombre) VALUES (101, 'Ana');\r"
+  - "INSERT INTO productos (id, nombre) VALUES (5, 'Tablet');\r"
+  - "UPDATE empleados SET salario = 2000 WHERE departamento = 'Ventas';\r"
+  - "UPDATE pedidos SET estado = 'En proceso' WHERE id > 10;\r"
+  - "DELETE FROM pedidos;\r"
+  randomWords: []

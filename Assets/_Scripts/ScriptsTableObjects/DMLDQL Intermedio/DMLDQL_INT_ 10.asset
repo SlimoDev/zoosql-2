@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2751dde0c162140aeeac9b860887cf, type: 3}
+  m_Name: DMLDQL_INT_ 10
+  m_EditorClassIdentifier: 
+  text_pregunta: "\xBFCu\xE1l instrucci\xF3n elimina todos los productos cuyo stock
+    es cero en la tabla productos?"
+  spr_pregunta: {fileID: 0}
+  text_alternativas:
+  - text_alternativa: 'REMOVE ALL FROM productos WHERE stock = 0; '
+    Is_correct: 0
+  - text_alternativa: 'DROP FROM productos WHERE stock = 0; '
+    Is_correct: 0
+  - text_alternativa: RUNCATE productos WHERE stock = 0;
+    Is_correct: 0
+  - text_alternativa: DELETE FROM productos WHERE stock = 0;
+    Is_correct: 1
+  dificultad: 1
+  tema: 2
+  tipoPregunta: 24

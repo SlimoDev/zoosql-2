@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f2c5da7ab01d04fa9837bdd91a39f8, type: 3}
+  m_Name: CD_DMLDQL_Dif
+  m_EditorClassIdentifier: 
+  minRandomWords: 0
+  maxRandomWords: 0
+  quizType: 22
+  cards:
+  - "SELECT nombre FROM empleados WHERE salario > (SELECT AVG(salario) FROM empleados
+    e WHERE e.departamento = empleados.departamento);\r"
+  - "SELECT nombre, precio FROM productos WHERE categoria = 'Electr\xF3nica' AND
+    precio > (SELECT AVG(precio) FROM productos);\r"
+  - "INSERT INTO historial_precios (producto_id, precio, fecha) VALUES (10, (SELECT
+    precio FROM productos WHERE id = 10), GETDATE());\r"
+  - "INSERT INTO ventas_recientes SELECT * FROM ventas WHERE fecha > DATEADD(MONTH,
+    -6, GETDATE());\r"
+  - "UPDATE empleados SET salario = salario * 1.15 WHERE departamento = 'Ventas'
+    AND salario < (SELECT AVG(salario) FROM empleados WHERE departamento = 'Ventas');\r"
+  - "SELECT nombre FROM productos WHERE precio > ALL (SELECT precio FROM productos
+    WHERE categoria = 'Accesorios');\r"
+  - UPDATE inventario SET stock = stock + (SELECT stock FROM productos WHERE productos.id
+    = inventario.id);
+  - "DELETE FROM clientes WHERE id NOT IN (SELECT MIN(id) FROM clientes GROUP BY
+    email);\r"
+  - "DELETE FROM ordenes WHERE total < (SELECT AVG(total) FROM ordenes);\r"
+  - "SELECT YEAR(fecha) AS a\xF1o, MONTH(fecha) AS mes, SUM(total) AS total_ventas
+    FROM ventas GROUP BY YEAR(fecha), MONTH(fecha);\r"
+  randomWords: []

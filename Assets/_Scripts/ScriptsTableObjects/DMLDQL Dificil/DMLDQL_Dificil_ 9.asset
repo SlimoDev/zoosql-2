@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2751dde0c162140aeeac9b860887cf, type: 3}
+  m_Name: DMLDQL_Dificil_ 9
+  m_EditorClassIdentifier: 
+  text_pregunta: "\xBFCu\xE1l consulta selecciona los nombres de los empleados que
+    tienen un salario mayor al salario promedio de su propio departamento?"
+  spr_pregunta: {fileID: 0}
+  text_alternativas:
+  - text_alternativa: SELECT nombre FROM empleados WHERE salario > (SELECT AVG(salario)
+      FROM empleados);
+    Is_correct: 0
+  - text_alternativa: SELECT nombre FROM empleados WHERE salario > (SELECT AVG(salario)
+      FROM empleados GROUP BY departamento);
+    Is_correct: 0
+  - text_alternativa: SELECT nombre FROM empleados WHERE salario > (SELECT AVG(salario)
+      FROM empleados e WHERE e.departamento = empleados.departamento);
+    Is_correct: 1
+  - text_alternativa: SELECT nombre FROM empleados WHERE salario > AVG(salario) BY
+      departamento;
+    Is_correct: 0
+  dificultad: 2
+  tema: 2
+  tipoPregunta: 26

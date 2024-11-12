@@ -62,7 +62,7 @@ public class CardsGameManager : MonoBehaviour
         {
             Tema.Algebra => m_cardsAlgebraLinear,
             Tema.Plsql => m_cardsPlsql,
-            Tema.Dmliql => m_cardsDmliql,
+            Tema.DMLDQL => m_cardsDmliql,
             _ => new List<Cards>()  // En caso de que no haya coincidencia, devuelve una lista vacía.
         };
 

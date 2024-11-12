@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/AlgebraDialogs.unity
     guid: f450461df83eb8144ab86debbdb90921
   - enabled: 1
-    path: Assets/Scenes/DMLIDQLDialogs.unity
+    path: Assets/Scenes/DMLDQLDialogs.unity
     guid: 6943a7165b249c043ae988b2a9471c77
   - enabled: 1
     path: Assets/Scenes/PLSQLDialogs.unity

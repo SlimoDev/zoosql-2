@@ -25,19 +25,27 @@ public class QuizUI : MonoBehaviour
     {
         m_question = GameObject.Find("TextQuestion").GetComponent<Text>();
     }
-    
+
     public void MostrarPregunta(PreguntaSO pregunta)
     {
-
         m_question.text = pregunta.text_pregunta;
-        m_image.sprite = pregunta.spr_pregunta;
+
+        if (pregunta.spr_pregunta != null)
+        {
+            m_image.sprite = pregunta.spr_pregunta;
+            m_image.gameObject.SetActive(true); // Muestra la imagen si existe
+        }
+        else
+        {
+            m_image.gameObject.SetActive(false); // Oculta el componente de imagen si no hay imagen
+        }
 
         for (int i = 0; i < m_buttonList.Capacity; i++)
         {
             m_buttonList[i].GetComponentInChildren<Text>().text = pregunta.text_alternativas[i].text_alternativa;
         }
-
     }
+
 
 
 }

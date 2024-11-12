@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2751dde0c162140aeeac9b860887cf, type: 3}
+  m_Name: DMLDQL_Dificil_ 5
+  m_EditorClassIdentifier: 
+  text_pregunta: "\xBFCu\xE1l instrucci\xF3n aumenta el salario en un 5% para empleados
+    cuyo departamento es 'IT'?"
+  spr_pregunta: {fileID: 0}
+  text_alternativas:
+  - text_alternativa: UPDATE empleados SET salario = salario + 5% WHERE departamento
+      = 'IT';
+    Is_correct: 0
+  - text_alternativa: UPDATE empleados SET salario = salario * 1.05 WHERE departamento
+      = 'IT';
+    Is_correct: 1
+  - text_alternativa: UPDATE empleados SET salario = salario * 0.05 WHERE departamento
+      = 'IT';
+    Is_correct: 0
+  - text_alternativa: UPDATE empleados SET salario = salario * 1.5 WHERE departamento
+      = 'IT';
+    Is_correct: 0
+  dificultad: 2
+  tema: 2
+  tipoPregunta: 23
