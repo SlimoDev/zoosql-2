@@ -54,7 +54,15 @@ public class ResultUI : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("AlgebraGame");
+            if(DataManager.Instance.Tema == Tema.DMLDQL)
+            {
+                SceneManager.LoadScene("QuizGameDMLDQL");
+            }
+            else
+            {
+                SceneManager.LoadScene("QuizGame");
+            }
+            
             GameManager2.Instance.Awake();
             GameManager2.Instance.IniciarJuego();
         }

@@ -21,6 +21,8 @@ namespace Controllers
 
         [Header("ConfigData")]
         [SerializeField] private ConfigData _configData;
+
+        public string levelToLoad;
         
         private bool _isInTransition;
         
@@ -84,7 +86,7 @@ namespace Controllers
 
                         Debug.Log("Game type: " + gameType);
 
-                        SceneManager.LoadScene("AlgebraGame");
+                        SceneManager.LoadScene(levelToLoad);
 
                         //if (gameType == GameType.QuizGame.ToString())
                         //{
