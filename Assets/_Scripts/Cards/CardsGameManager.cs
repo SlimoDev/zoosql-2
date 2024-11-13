@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardsGameManager : MonoBehaviour
 {
     [SerializeField] private int maxQuestions = 10;
     public List<Cards> m_cards;
+    public GameObject texto_cards;
     [SerializeField] private List<Cards> m_cardsAlgebraLinear;
     [SerializeField] private List<Cards> m_cardsDmliql;
     [SerializeField] private List<Cards> m_cardsPlsql;
@@ -37,6 +39,7 @@ public class CardsGameManager : MonoBehaviour
     {
         int randomCardNum = Random.Range(0, m_cards[difficulty].CardsList.Count);
         string randomCard = m_cards[difficulty].CardsList[randomCardNum];
+        texto_cards.GetComponent<Text>().text = m_cards[difficulty].TextoCards[randomCardNum].ToString();
 
         currentCardWords = new List<string>(randomCard.Split(' '));
         OnCardSelected?.Invoke(currentCardWords);

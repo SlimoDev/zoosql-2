@@ -35,4 +35,15 @@ MonoBehaviour:
   - "DELETE FROM ordenes WHERE total < (SELECT AVG(total) FROM ordenes);\r"
   - "SELECT YEAR(fecha) AS a\xF1o, MONTH(fecha) AS mes, SUM(total) AS total_ventas
     FROM ventas GROUP BY YEAR(fecha), MONTH(fecha);\r"
+  texto_cards:
+  - Texto1
+  - Texto2
+  - Texto3
+  - Texto4
+  - Texto5
+  - Texto6
+  - Texto7
+  - Texto8
+  - Texto9
+  - Texto10
   randomWords: []
