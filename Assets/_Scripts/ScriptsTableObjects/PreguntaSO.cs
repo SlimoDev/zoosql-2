@@ -48,7 +48,7 @@ public enum TipoPregunta
     Seleccion, Proyeccion,SeleccionCondicion,ProyeccionCondicion,Union,Diferencia,Interseccion, JoinNatural,UnionCodicion,JoinNaturalCondicion,AgregacionAgrupamiento,AgregacionCondicion,Agregacion,
 
     //DMLIQL 
-    SelecciónDatos, InsercionDatos,ActualizacionDatos,EliminacionDatos,FuncionesAgregado,Subconsultas
+    SelecciónDatos, InsercionDatos,ActualizacionDatos,EliminacionDatos,FuncionesAgregado,Subconsultas,CardsGame
 }
 
 

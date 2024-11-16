@@ -14,16 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRandomWords: 0
   maxRandomWords: 0
-  quizType: 21
+  quizType: 27
   cards:
-  - "SELECT * FROM productos;\r"
-  - "SELECT * FROM clientes WHERE pais = 'Per\xFA';\r"
-  - "SELECT nombre, salario FROM empleados;\r"
-  - "SELECT nombre FROM clientes WHERE compras > 5;\r"
-  - "SELECT nombre, pais FROM clientes ORDER BY nombre ASC;\r"
-  - "INSERT INTO empleados (id, nombre) VALUES (101, 'Ana');\r"
-  - "INSERT INTO productos (id, nombre) VALUES (5, 'Tablet');\r"
-  - "UPDATE empleados SET salario = 2000 WHERE departamento = 'Ventas';\r"
-  - "UPDATE pedidos SET estado = 'En proceso' WHERE id > 10;\r"
-  - "DELETE FROM pedidos;\r"
+  - "SELECT * FROM animales;\r\r"
+  - "SELECT * FROM animales WHERE habitat = 'acu\xE1tico';\r\r"
+  - "SELECT nombre, edad FROM animales WHERE especie = 'panda';\r"
+  - 'SELECT nombre FROM animales WHERE edad > 10;
+
+'
+  - 'SELECT nombre, especie FROM animales ORDER BY nombre ASC;
+
+'
+  - "INSERT INTO animales (id, nombre, especie) VALUES (101, 'Leo', 'le\xF3n');\r\n"
+  - 'INSERT INTO alimentacion (id, animal_id, comida) VALUES (5, 101, ''carne'');
+
+'
+  - 'UPDATE animales SET peso = 150 WHERE especie = ''tigre'';
+
+'
+  - 'UPDATE animales SET estado_salud = ''En tratamiento'' WHERE id > 50;
+
+'
+  - 'DELETE FROM visitas;
+
+'
+  texto_cards:
+  - "Selecciona todos los registros de la tabla animales para ver todos los animales
+    del zool\xF3gico"
+  - "ncuentra todos los animales cuyo h\xE1bitat es 'acu\xE1tico'"
+  - Selecciona el nombre y la edad de todos los pandas
+  - "Muestra los nombres de los animales que tienen m\xE1s de 10 a\xF1os"
+  - "Selecciona el nombre y especie de todos los animales ordenados alfab\xE9ticamente
+    por nombre"
+  - "Inserta un nuevo animal en la tabla animales con id 101 y nombre 'Leo', que
+    es un le\xF3n"
+  - Inserta un registro en alimentacion con id 5, animal_id 101, y comida 'carne'
+  - Actualiza el peso a 150 kg para todos los tigres
+  - Cambia el estado de salud a 'En tratamiento' para los animales con id mayor a
+    50
+  - Elimina todos los registros de la tabla visitas
   randomWords: []

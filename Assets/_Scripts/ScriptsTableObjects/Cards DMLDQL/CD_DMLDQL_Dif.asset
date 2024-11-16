@@ -14,36 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRandomWords: 0
   maxRandomWords: 0
-  quizType: 22
+  quizType: 27
   cards:
-  - "SELECT nombre FROM empleados WHERE salario > (SELECT AVG(salario) FROM empleados
-    e WHERE e.departamento = empleados.departamento);\r"
-  - "SELECT nombre, precio FROM productos WHERE categoria = 'Electr\xF3nica' AND
-    precio > (SELECT AVG(precio) FROM productos);\r"
-  - "INSERT INTO historial_precios (producto_id, precio, fecha) VALUES (10, (SELECT
-    precio FROM productos WHERE id = 10), GETDATE());\r"
-  - "INSERT INTO ventas_recientes SELECT * FROM ventas WHERE fecha > DATEADD(MONTH,
-    -6, GETDATE());\r"
-  - "UPDATE empleados SET salario = salario * 1.15 WHERE departamento = 'Ventas'
-    AND salario < (SELECT AVG(salario) FROM empleados WHERE departamento = 'Ventas');\r"
-  - "SELECT nombre FROM productos WHERE precio > ALL (SELECT precio FROM productos
-    WHERE categoria = 'Accesorios');\r"
-  - UPDATE inventario SET stock = stock + (SELECT stock FROM productos WHERE productos.id
-    = inventario.id);
-  - "DELETE FROM clientes WHERE id NOT IN (SELECT MIN(id) FROM clientes GROUP BY
-    email);\r"
-  - "DELETE FROM ordenes WHERE total < (SELECT AVG(total) FROM ordenes);\r"
-  - "SELECT YEAR(fecha) AS a\xF1o, MONTH(fecha) AS mes, SUM(total) AS total_ventas
-    FROM ventas GROUP BY YEAR(fecha), MONTH(fecha);\r"
+  - 'SELECT nombre FROM animales WHERE peso > (SELECT AVG(peso) FROM animales);
+
+'
+  - 'INSERT INTO alimentacion (animal_id, comida) VALUES (5, ''pescado'');
+
+'
+  - 'INSERT INTO animales_backup SELECT * FROM animales WHERE especie = ''tigre'';
+
+'
+  - 'UPDATE animales SET peso = peso * 1.1 WHERE especie = ''panda'';
+
+'
+  - "UPDATE animales SET estado_salud = 'En revisi\xF3n' WHERE especie = 'delf\xEDn';\r\n"
+  - 'SELECT habitat, AVG(peso) FROM animales GROUP BY habitat;
+
+'
+  - 'SELECT COUNT(*) FROM animales WHERE especie = ''tigre'';
+
+'
   texto_cards:
-  - Texto1
-  - Texto2
-  - Texto3
-  - Texto4
-  - Texto5
-  - Texto6
-  - Texto7
-  - Texto8
-  - Texto9
-  - Texto10
+  - Selecciona los nombres de los animales cuyo peso es mayor al promedio
+  - Inserta un registro en alimentacion para un oso polar que consume pescado
+  - Duplica en animales_backup todos los registros de tigres
+  - Incrementa un 10% el peso de todos los pandas
+  - "Cambia el estado de los delfines a 'En revisi\xF3n'"
+  - "Muestra el peso promedio de los animales por h\xE1bitat"
+  - "Encuentra el n\xFAmero total de tigres en el zool\xF3gico"
   randomWords: []

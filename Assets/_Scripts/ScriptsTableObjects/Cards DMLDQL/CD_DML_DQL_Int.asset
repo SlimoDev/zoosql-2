@@ -14,20 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRandomWords: 0
   maxRandomWords: 0
-  quizType: 0
+  quizType: 27
   cards:
-  - "SELECT nombre, salario FROM empleados WHERE salario > 3000 ORDER BY salario
-    DESC;\r"
-  - "SELECT * FROM productos WHERE precio BETWEEN 50 AND 200;\r"
-  - "SELECT nombre FROM empleados WHERE departamento = 'IT' AND salario > (SELECT
-    AVG(salario) FROM empleados);\r"
-  - "INSERT INTO ventas (id, cliente, total) VALUES (202, 'Carlos', (SELECT precio
-    FROM productos WHERE id = 3) * 2);\r"
-  - "INSERT INTO empleados_backup SELECT * FROM empleados;\r"
-  - "UPDATE productos SET precio = precio * 1.1 WHERE tipo = 'Electr\xF3nico';\r"
-  - "UPDATE ordenes SET estado = 'Finalizado' WHERE total > 500;\r"
-  - "DELETE FROM clientes WHERE id NOT IN (SELECT cliente_id FROM compras WHERE fecha
-    > DATEADD(YEAR, -1, GETDATE()));\r"
-  - "DELETE FROM productos WHERE stock = 0 AND precio < 20;\r"
-  - "SELECT departamento, COUNT(*) AS total_empleados FROM empleados GROUP BY departamento;\r"
+  - "SELECT nombre, edad FROM animales WHERE especie = 'delf\xEDn' AND edad > 5;\r\n"
+  - "SELECT * FROM animales WHERE habitat = 'selv\xE1tico' AND peso > 50;\r\n"
+  - "Muestra los nombres de los animales y su estado de salud agrupados por su h\xE1bitat"
+  - Incrementa en 20 kg el peso de todos los osos polares
+  - "UPDATE animales SET estado_salud = 'Excelente' WHERE habitat = 'desierto' AND
+    peso < 50;\r"
+  - 'DELETE FROM alimentacion WHERE comida = ''chatarra'';
+
+'
+  - 'DELETE FROM animales WHERE especie = ''reptil'' AND edad < 1;
+
+'
+  - 'SELECT habitat, COUNT(*) AS total_animales FROM animales GROUP BY habitat;
+
+'
+  texto_cards:
+  - "Selecciona el nombre y edad de los delfines que tienen m\xE1s de 5 a\xF1os"
+  - "Encuentra todos los animales que viven en el h\xE1bitat 'selv\xE1tico' y pesan
+    m\xE1s de 50 kg"
+  - 'SELECT nombre, estado_salud, habitat FROM animales GROUP BY habitat, nombre,
+    estado_salud; '
+  - 'UPDATE animales SET peso = peso + 20 WHERE especie = ''oso polar''; '
+  - "Cambia el estado de salud a 'Excelente' para los animales del h\xE1bitat 'desierto'
+    cuyo peso es menor a 50 kg"
+  - Elimina todos los registros de la tabla alimentacion donde la comida sea 'chatarra'
+  - "Elimina los registros de animales que tienen menos de 1 a\xF1o y su especie
+    es 'reptil'"
+  - "Muestra el n\xFAmero total de animales agrupados por su h\xE1bitat"
   randomWords: []

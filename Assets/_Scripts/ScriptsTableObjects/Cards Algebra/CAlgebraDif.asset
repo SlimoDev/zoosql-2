@@ -14,6 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRandomWords: 0
   maxRandomWords: 0
-  quizType: 0
-  cards: []
+  quizType: 27
+  cards:
+  - "\u03C3_peso > (\u03C0_avg(peso) (Animales)) (Animales)\r\n"
+  - "\u03C3_habitat = 'selv\xE1tico' \u2227 estado_salud \u2260 'Excelente' (Animales)\r\n"
+  - "\u03C0_nombre (\u03C3_peso >100 \u2227 edad>5 (Animales))\r\n"
+  - "\u03C0_nombre ,habitat (\u03C3_estado_salud = 'En tratamiento' (Animales))\r\n"
+  - "\u03C3_habitat = 'acu\xE1tico' \u2227 (peso<80 \u2228 edad<3) (Animales)\r\n"
+  - "\u03C3_peso>50 \u2227 habitat \u2260 'desierto' (Animales)\r\n"
+  - "\u03C3_especie = 'panda' (Animales) \u222A \u03C3_especie = 'tigre' (Animales)\r\n"
+  - "\u03C3_edad<10 (Animales) \u2212 \u03C3_estado_salud = 'En tratamiento' (Animales)\r\n"
+  - "\u03C3_habitat = 'acu\xE1tico' (Animales) \u2229 \u03C3_peso<50 (Animales)\r\n"
+  - "\u03C0_nombre (\u03C3_peso> (\u03C0_avg(peso) (\u03C3_especie='panda' (Animales)))
+    (Animales))\r\n"
+  texto_cards:
+  - "Selecciona los animales que pesan m\xE1s que el promedio de peso del zool\xF3gico"
+  - "Selecciona los animales del h\xE1bitat 'selv\xE1tico' cuyo estado de salud es
+    diferente a 'Excelente'"
+  - "Proyecta los nombres de los animales que pesan m\xE1s de 100 kg y tienen m\xE1s
+    de 5 a\xF1os"
+  - "Proyecta el nombre y h\xE1bitat de los animales con estado de salud 'En tratamiento'"
+  - "Selecciona los animales acu\xE1ticos que pesan menos de 80 kg o tienen menos
+    de 3 a\xF1os"
+  - "Selecciona los animales que tienen un peso superior a 50 kg y que adem\xE1s
+    no est\xE1n asignados al h\xE1bitat 'desierto'"
+  - Encuentra los animales que son pandas o tigres
+  - "Encuentra los animales que no est\xE1n en tratamiento pero tienen menos de 10
+    a\xF1os"
+  - "Encuentra los animales que est\xE1n asignados al h\xE1bitat 'acu\xE1tico' y
+    tambi\xE9n pesan menos de 50 kg"
+  - Proyecta los nombres de los animales cuyo peso es superior al promedio de los
+    pandas
   randomWords: []

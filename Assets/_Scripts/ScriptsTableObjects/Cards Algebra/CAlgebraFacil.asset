@@ -14,9 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRandomWords: 1
   maxRandomWords: 2
-  quizType: 21
+  quizType: 27
   cards:
-  - Esto es un ejemplo Esto
-  randomWords:
-  - random1
-  - random2
+  - "\u03C3_especie = 'panda' (Animales)\r\n"
+  - "\u03C3_especie = 'delf\xEDn' \u2227 edad>5 (Animales)\r\n"
+  - "\u03C0_nombre (Animales)\r\n"
+  - "\u03C0_nombre ,edad (\u03C3_especie = 'le\xF3n' (Animales))\r\n"
+  - "\u03C3_especie = 'tigre' \u2227 peso>100 (Animales)\r\n"
+  - "\u03C3_estado_salud='En tratamiento'(Animales)\r\n"
+  - "\u03C3_habitat = 'acu\xE1tico' (Animales) \u222A \u03C3_habitat='selv\xE1tico'(Animales)\r\n"
+  - "Animales \u2212 \u03C0_animal_id(Cuidados)\r\n"
+  - "\u03C3_estado_salud='En tratamiento'(Animales) \u2229 \u03C3_habitat='selv\xE1tico'(Animales)\r\n"
+  - "\u03C0_nombre (\u03C3_habitat = 'desierto' (Animales))\r\n"
+  texto_cards:
+  - Selecciona todos los pandas de la tabla Animales
+  - "Selecciona los delfines que tienen m\xE1s de 5 a\xF1os de la tabla Animales"
+  - Muestra solo los nombres de todos los animales
+  - Proyecta los nombres y las edades de los leones en la tabla Animales
+  - "Selecciona los tigres que pesan m\xE1s de 100 kg de la tabla Animales"
+  - Selecciona los animales cuyo estado de salud es 'En tratamiento'
+  - "Encuentra todos los animales que viven en los h\xE1bitats 'acu\xE1tico' o 'selv\xE1tico'"
+  - Encuentra los animales que no tienen asignado un cuidado
+  - "Encuentra los animales que est\xE1n en tratamiento y tambi\xE9n est\xE1n en
+    el h\xE1bitat 'selv\xE1tico'"
+  - "Proyecta los nombres de los animales cuyo h\xE1bitat es 'desierto'"
+  randomWords: []
