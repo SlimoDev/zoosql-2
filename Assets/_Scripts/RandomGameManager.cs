@@ -14,8 +14,15 @@ public class RandomGameManager : MonoBehaviour
     }
     public static void RandomMinigame()
     {
-        rndGame = Random.Range(0, 2);
-        Debug.Log("JUEGO: " +rndGame);
+        if (DataManager.Instance.Tema == Tema.Plsql)
+        {
+            rndGame = 0;
+        }
+        else
+        {
+            rndGame = Random.Range(0, 2);
+        }
+        Debug.Log("JUEGO: " + rndGame);
     }
     public void GameSelector(int index)
     {
